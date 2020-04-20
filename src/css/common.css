@@ -1,0 +1,107 @@
+@font-face { font-family: 'MapoPeacefull'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoPeacefullA.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'TTTogether'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'GmarketSansLight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Cafe24Simplehae'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+/* photo */
+.photo-main{
+    background-image: url("../img/car.jpg");
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* corona */
+.corona{
+    height: calc(100%);
+    background-color: #f6f6f6;
+    font-family: "MapoPeacefull";
+}
+
+.corona-header{
+    padding: 0;
+    margin-bottom: 70px;
+}
+
+.corona-logo{
+    margin-top: 80px;
+    font-family: "TTTogether";
+}
+.corona-logo-desc {
+    font-size: 15px;
+    color: #c6c6c6;
+    font-family: "Cafe24Simplehae";
+}
+
+.corona-box-desc{
+    font-size: 20px;
+    font-family: "GmarketSansLight";
+    margin-left: 0.8rem;
+}
+
+.corona-box-wrap{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    margin: 0.8rem;
+}
+
+.corona-icon{
+    float: right;
+}
+
+.badge-box{
+    padding-bottom: 1.5rem;
+}
+.badge{
+    font-size: 14px;
+    float: left;
+}
+
+.badge-desc{
+    float: left;
+    margin-left: 5px;
+    color: #686868;
+}
+
+.corona-content-table{
+    margin-top: 40px;
+}
+
+/* common */
+html {
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+}
+#root{
+    height: 100%;
+}
+
+.content{
+    height: 100%;
+}
+
+.font-gray{
+    color: #adadad;
+}
+
+.footer{
+    font-size: 14px;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+	padding: 15px 0;
+}
