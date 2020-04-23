@@ -23,12 +23,12 @@ class Main extends Component {
          super(props);
          this.state = {
              Corona : CoronaData,
-             Confirm : numberFormat(CoronaData.Global.TotalConfirmed),
-             Death : numberFormat(CoronaData.Global.TotalDeaths),
-             Recover : numberFormat(CoronaData.Global.TotalRecovered),
-             newConfirm : numberFormat(CoronaData.Global.NewConfirmed),
-             newDeath : numberFormat(CoronaData.Global.NewDeaths),
-             newRecover : numberFormat(CoronaData.Global.NewRecovered),
+             Confirm : CoronaData.Global.TotalConfirmed,
+             Death : CoronaData.Global.TotalDeaths,
+             Recover : CoronaData.Global.TotalRecovered,
+             newConfirm : CoronaData.Global.NewConfirmed,
+             newDeath : CoronaData.Global.NewDeaths,
+             newRecover : CoronaData.Global.NewRecovered,
              Rate : ((CoronaData.Global.TotalDeaths/CoronaData.Global.TotalConfirmed) * 100).toFixed(2),
              incConfirm : ((CoronaData.Global.NewConfirmed/(CoronaData.Global.TotalConfirmed)) * 100).toFixed(2),
              incDeath : ((CoronaData.Global.NewDeaths/(CoronaData.Global.TotalDeaths)) * 100).toFixed(2),
@@ -43,8 +43,13 @@ class Main extends Component {
          } else  if((this.state.Rate - this.state.lastRate) <= 0){
              _Rate = <Badge variant="success">{(this.state.Rate - this.state.lastRate).toFixed(2)}% increase</Badge>;
          }
-
-        return (
+         this.state.Confirm = numberFormat(this.state.Confirm);
+         this.state.Death = numberFormat(this.state.Death);
+         this.state.Recover = numberFormat(this.state.Recover);
+         this.state.newConfirm = numberFormat(this.state.newConfirm);
+         this.state.newDeath = numberFormat(this.state.newDeath);
+         this.state.newRecover = numberFormat(this.state.newRecover);
+         return (
             <div className="corona">
                 <Container>
                     <Row className="corona-header">
