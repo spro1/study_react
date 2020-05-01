@@ -8,7 +8,7 @@ class TopNav extends Component{
     render() {
         return (
             <Navbar bg="dark" variant="dark" expand="lg">
-                <Navbar.Brand href="/sutdy_react">
+                <Navbar.Brand href="/study_react">
                     <img
                         alt=""
                         src={logo}
