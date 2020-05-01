@@ -8,7 +8,7 @@ class TopNav extends Component{
     render() {
         return (
             <Navbar bg="dark" variant="dark" expand="lg">
-                <Navbar.Brand href="/">
+                <Navbar.Brand href="/sutdy_react">
                     <img
                         alt=""
                         src={logo}
@@ -19,9 +19,9 @@ class TopNav extends Component{
                     웹사이트 모음
                 </Navbar.Brand>
                 <Nav className="mr-auto">
-                    <Link className="nav-link" to="/">Home</Link>
-                    <Link className="nav-link" to="/photo">Photo</Link>
-                    <Link className="nav-link" to="/corona">Corona</Link>
+                    <Link className="nav-link" to="/sutdy_react">Home</Link>
+                    <Link className="nav-link" to="/sutdy_react/photo">Photo</Link>
+                    <Link className="nav-link" to="/sutdy_react/corona">Corona</Link>
                 </Nav>
             </Navbar>
         );

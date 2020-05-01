@@ -13,9 +13,9 @@ function App() {
       <React.Fragment>
 		  <TopNav/>
 		  <div className="content">
-			  <Route exact path="/" component={Home}/>
-			  <Route path="/photo" component={Photo}/> {/* exact props */}
-			  <Route path="/corona" component={Corona}/> {/* exact props */}
+			  <Route exact path="/sutdy_react" component={Home}/>
+			  <Route path="/sutdy_react/photo" component={Photo}/> {/* exact props */}
+			  <Route path="/sutdy_react/corona" component={Corona}/> {/* exact props */}
 		  </div>
 		  <Footer/>
 	  </React.Fragment>
