@@ -19,9 +19,9 @@ class TopNav extends Component{
                     웹사이트 모음
                 </Navbar.Brand>
                 <Nav className="mr-auto">
-                    <Link className="nav-link" to="/sutdy_react">Home</Link>
-                    <Link className="nav-link" to="/sutdy_react/photo">Photo</Link>
-                    <Link className="nav-link" to="/sutdy_react/corona">Corona</Link>
+                    <Link className="nav-link" to="/study_react">Home</Link>
+                    <Link className="nav-link" to="/study_react/photo">Photo</Link>
+                    <Link className="nav-link" to="/study_react/corona">Corona</Link>
                 </Nav>
             </Navbar>
         );
