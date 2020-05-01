@@ -6,10 +6,10 @@ class Main extends Component {
         return (
             <div className="photo">
                 <div className="photo-main">
-                    <h1>가나다라</h1>
+
 
                 </div>
-                <Container>
+                <Container className="photo-content">
                     <h1>
                         photo
                     </h1>
