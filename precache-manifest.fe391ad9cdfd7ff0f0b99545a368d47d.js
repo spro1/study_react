@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "11efb2edd851f3a9e8f7830ed9ebd169",
+    "revision": "cd7ad64eddb6c601a22d5550231fa1e8",
     "url": "/sutdy_react/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sutdy_react/static/css/2.8487b377.chunk.css"
   },
   {
-    "revision": "4763e5cc8db8188fb52e",
+    "revision": "d2fffbd84a36809d38a3",
     "url": "/sutdy_react/static/css/main.f4815a6c.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sutdy_react/static/js/2.ea2f76ac.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4763e5cc8db8188fb52e",
-    "url": "/sutdy_react/static/js/main.5c6d1423.chunk.js"
+    "revision": "d2fffbd84a36809d38a3",
+    "url": "/sutdy_react/static/js/main.9f793f35.chunk.js"
   },
   {
     "revision": "3e976195c7995f475f83",

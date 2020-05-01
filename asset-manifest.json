@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sutdy_react/static/css/main.f4815a6c.chunk.css",
-    "main.js": "/sutdy_react/static/js/main.5c6d1423.chunk.js",
-    "main.js.map": "/sutdy_react/static/js/main.5c6d1423.chunk.js.map",
+    "main.js": "/sutdy_react/static/js/main.9f793f35.chunk.js",
+    "main.js.map": "/sutdy_react/static/js/main.9f793f35.chunk.js.map",
     "runtime-main.js": "/sutdy_react/static/js/runtime-main.5262fe3c.js",
     "runtime-main.js.map": "/sutdy_react/static/js/runtime-main.5262fe3c.js.map",
     "static/css/2.8487b377.chunk.css": "/sutdy_react/static/css/2.8487b377.chunk.css",
     "static/js/2.ea2f76ac.chunk.js": "/sutdy_react/static/js/2.ea2f76ac.chunk.js",
     "static/js/2.ea2f76ac.chunk.js.map": "/sutdy_react/static/js/2.ea2f76ac.chunk.js.map",
     "index.html": "/sutdy_react/index.html",
-    "precache-manifest.a65c7dddf6f41c8e4102303027253f17.js": "/sutdy_react/precache-manifest.a65c7dddf6f41c8e4102303027253f17.js",
+    "precache-manifest.fe391ad9cdfd7ff0f0b99545a368d47d.js": "/sutdy_react/precache-manifest.fe391ad9cdfd7ff0f0b99545a368d47d.js",
     "service-worker.js": "/sutdy_react/service-worker.js",
     "static/css/2.8487b377.chunk.css.map": "/sutdy_react/static/css/2.8487b377.chunk.css.map",
     "static/css/main.f4815a6c.chunk.css.map": "/sutdy_react/static/css/main.f4815a6c.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.8487b377.chunk.css",
     "static/js/2.ea2f76ac.chunk.js",
     "static/css/main.f4815a6c.chunk.css",
-    "static/js/main.5c6d1423.chunk.js"
+    "static/js/main.9f793f35.chunk.js"
   ]
 }

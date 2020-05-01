@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/sutdy_react/precache-manifest.a65c7dddf6f41c8e4102303027253f17.js"
+  "/sutdy_react/precache-manifest.fe391ad9cdfd7ff0f0b99545a368d47d.js"
 );
 
 self.addEventListener('message', (event) => {
