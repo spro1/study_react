@@ -25,6 +25,10 @@
 
 
 /* corona */
+a, a:link, a:hover{
+    text-decoration: none;
+    color: #c6c6c6;
+}
 .corona{
     height: calc(100%);
     background-color: #f6f6f6;

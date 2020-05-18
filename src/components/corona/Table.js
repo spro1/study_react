@@ -59,13 +59,15 @@ const columns = [{
 export default class Main extends Component{
      constructor(props) {
          super(props);
+
      }
 
     render() {
+         console.log("aaa",this.props.Corona);
         return(
             <ToolkitProvider
                 keyField="id"
-                data={ this.props.Corona.Countries }
+                data={ this.props.Corona }
                 columns={ columns }
                 search
             >

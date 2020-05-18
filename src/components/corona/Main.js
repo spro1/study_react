@@ -22,20 +22,57 @@ class Main extends Component {
      constructor(props) {
          super(props);
          this.state = {
+             isLoaded: false,
+             error: null,
+             items: [],
              Corona : CoronaData,
-             Confirm : CoronaData.Global.TotalConfirmed,
-             Death : CoronaData.Global.TotalDeaths,
-             Recover : CoronaData.Global.TotalRecovered,
-             newConfirm : CoronaData.Global.NewConfirmed,
-             newDeath : CoronaData.Global.NewDeaths,
-             newRecover : CoronaData.Global.NewRecovered,
-             Rate : ((CoronaData.Global.TotalDeaths/CoronaData.Global.TotalConfirmed) * 100).toFixed(2),
-             incConfirm : ((CoronaData.Global.NewConfirmed/(CoronaData.Global.TotalConfirmed)) * 100).toFixed(2),
-             incDeath : ((CoronaData.Global.NewDeaths/(CoronaData.Global.TotalDeaths)) * 100).toFixed(2),
-             incRecover : ((CoronaData.Global.NewRecovered/(CoronaData.Global.TotalRecovered)) * 100).toFixed(2),
-             lastRate : (((CoronaData.Global.TotalDeaths-CoronaData.Global.NewDeaths)/(CoronaData.Global.TotalConfirmed-CoronaData.Global.NewConfirmed))*100).toFixed(2)
+             Confirm : "",
+             Death : "",
+             Recover : "",
+             newConfirm : "",
+             newDeath : "",
+             newRecover : "",
+             Rate : "",
+             incConfirm : "",
+             incDeath : "",
+             incRecover : "",
+             lastRate : "",
+             global : {},
          };
+         //this.state.items = [...this.state.items, this.state.global];
      }
+
+     componentDidMount() {
+         fetch("https://api.covid19api.com/summary")
+             .then(res => res.json())
+             .then(
+                 (result) => {
+                     this.setState({
+                         isLoaded: true,
+                         items: result.Countries,
+                         Global : result.Global,
+                         Confirm : result.Global.TotalConfirmed,
+                         Death : result.Global.TotalDeaths,
+                         Recover : result.Global.TotalRecovered,
+                         newConfirm : result.Global.NewConfirmed,
+                         newDeath : result.Global.NewDeaths,
+                         newRecover : result.Global.NewRecovered,
+                         Rate : ((result.Global.TotalDeaths/result.Global.TotalConfirmed) * 100).toFixed(2),
+                         incConfirm : ((result.Global.NewConfirmed/(result.Global.TotalConfirmed)) * 100).toFixed(2),
+                         incDeath : ((result.Global.NewDeaths/(result.Global.TotalDeaths)) * 100).toFixed(2),
+                         incRecover : ((result.Global.NewRecovered/(result.Global.TotalRecovered)) * 100).toFixed(2),
+                         lastRate : (((result.Global.TotalDeaths-result.Global.NewDeaths)/(result.Global.TotalConfirmed-result.Global.NewConfirmed))*100).toFixed(2),
+                     });
+                 },
+                 (error) => {
+                     this.setState({
+                         isLoaded: true,
+                         error
+                     });
+                 }
+             )
+        }
+
     render() {
          var _Rate = null;
          if ((this.state.Rate - this.state.lastRate) > 0) {
@@ -43,19 +80,29 @@ class Main extends Component {
          } else  if((this.state.Rate - this.state.lastRate) <= 0){
              _Rate = <Badge variant="success">{(this.state.Rate - this.state.lastRate).toFixed(2)}% increase</Badge>;
          }
+         this.state.global = {
+            "NewConfirmed": this.state.newConfirm,
+            "TotalConfirmed": this.state.Confirm,
+            "NewDeaths": this.state.newDeath,
+            "TotalDeaths": this.state.Death,
+            "NewRecovered": this.state.newRecover,
+            "TotalRecovered": this.state.Recover,
+             "Country" : "Global"
+         };
          this.state.Confirm = numberFormat(this.state.Confirm);
          this.state.Death = numberFormat(this.state.Death);
          this.state.Recover = numberFormat(this.state.Recover);
          this.state.newConfirm = numberFormat(this.state.newConfirm);
          this.state.newDeath = numberFormat(this.state.newDeath);
          this.state.newRecover = numberFormat(this.state.newRecover);
+         this.state.items.push(this.state.global);
          return (
             <div className="corona">
                 <Container>
                     <Row className="corona-header">
                         <Col xs={12} md={8} className="corona-logo">
                             <h1><img src={Corona}/> COVID-19</h1>
-                            <p className="corona-logo-desc">COVID-19 세계, 국가별 현황 공유</p>
+                            <p className="corona-logo-desc">COVID-19 세계, 국가별 현황 공유 (source : <a href="https://api.covid19api.com/summary">https://api.covid19api.com/summary</a>)</p>
                         </Col>
                     </Row>
                     <Row classNmae="corona-content">
@@ -114,7 +161,7 @@ class Main extends Component {
                     </Row>
                     <Row>
                         <Col md={12} className="corona-table">
-                            <CoronaTable Corona={this.state.Corona}></CoronaTable>
+                            <CoronaTable Corona={this.state.items}></CoronaTable>
                         </Col>
                     </Row>
                 </Container>
